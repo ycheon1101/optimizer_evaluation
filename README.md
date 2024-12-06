@@ -14,7 +14,19 @@ For semantic segmentation task, our baseline code is from DAFormer paper code. S
 ```
 
 # Results
+<img src='./resources/performance.png'>
 
+ori represents the original version without any schedulers or warm-up applied. polylr refers to the Polynomial Decay Schedule with a power of 0.9, while poly10 uses a power of 1.0. Rel indicates the relative improvement between the ori and warm-up results, expressed as a percentage.
+
+
+<img src='./resources/segmap_result_3.png'>
+
+
+(c) illustrates the results of AdamW, showing the highest accuracy in same-domain testing. AdamW aligns most closely with the Ground Truth in the source domain, while (d) and (e) present cross-domain evaluation results (GTA5 → Cityscapes), where no domain adaptation was applied, and testing was conducted directly on the target domain. A comparison between AdaGrad, which achieved the highest generalization performance, and RMSProp, which had the lowest, reveals that AdaGrad maintains closer alignment with the Ground Truth in the target domain, demonstrating superior generalization capability.
+
+<img src='./resources/ranking.png'>
+
+The rankings were determined using weighted scores, with performance given a weight of 0.5, generalization 0.4, and time consumption 0.1. Performance rankings were based on the highest mIoU achieved, including scheduling and warm-up. As a result, AdaGrad secured the top position, followed by AdamW and SGD.
 
 
 
