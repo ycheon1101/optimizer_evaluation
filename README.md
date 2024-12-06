@@ -16,7 +16,7 @@ For semantic segmentation task, our baseline code is from DAFormer paper code. S
 # Results
 <img src='./resources/performance.png'>
 
-ori represents the original version without any schedulers or warm-up applied. polylr refers to the Polynomial Decay Schedule with a power of 0.9, while poly10 uses a power of 1.0. Rel indicates the relative improvement between the ori and warm-up results, expressed as a percentage.
+ori represents the original version without any schedulers or warm-up applied. polylr refers to the Polynomial Decay Schedule with a power of 0.9, while poly10 uses a power of 1.0. Rel indicates the relative improvement between the ori and warm-up results, expressed as a percentage. Performance evaluation was conducted using mIoU.
 
 
 <img src='./resources/segmap_result_3.png'>
